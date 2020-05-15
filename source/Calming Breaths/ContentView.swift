@@ -103,7 +103,9 @@ struct ContentView: View {
         let d = petalCount - Double(Int(petalCount)) > 0 ? 1 : 0
         
         for i in 0..<Int(petalCount) + d {
-            let angle = (Double(i) ) * (360/Double(petalCount))
+            let spinAngle = 90.0
+            let additionalSpin = spinAngle * (1.0 - Double(self.scale))
+            let angle = (Double(i) ) * (360/Double(petalCount)) + additionalSpin
 
             let angleInRad = angle*Double.pi/180
             
