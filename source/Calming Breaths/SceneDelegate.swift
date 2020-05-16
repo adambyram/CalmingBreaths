@@ -20,12 +20,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView(petalCount: 6, size: 300.0, scale: 1.0)
-
+        //let contentView = ContentView(petalCount: 6, size: 300.0, scale: 1.0)
+        
+        // Use the Breathe animation from https://github.com/victorpanitz/iOS-BreathAnimation-AppleWatch-
+        //let viewController = BreathViewController()
+        
+        let startView = StartView()
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = HostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: startView)
+            //window.rootViewController = viewController
+            //window.rootViewController = HostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }

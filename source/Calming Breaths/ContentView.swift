@@ -25,6 +25,10 @@ struct ContentView: View {
     @State var scale: CGFloat
     @State var expanded: Bool = false
     
+     var breathAnimation : Animation {
+        Animation.easeInOut(duration: 3).repeatCount(5, autoreverses: true)
+    }
+    
     var body: some View {
         let extra: Int = Double(petalCount) != Double(Int(petalCount)) ? 1 : 0
         let numberOfSides = Int(petalCount) + extra
@@ -43,12 +47,12 @@ struct ContentView: View {
                 
                 }.edgesIgnoringSafeArea(.top)
             }.edgesIgnoringSafeArea(.top)
-         .onTapGesture {
-                withAnimation(.easeOut(duration: 4.0)) {
+            .onTapGesture() {
+                withAnimation(self.breathAnimation) {
                     self.scale = self.expanded ? 0.1 : 1.0
+                    self.expanded = !self.expanded
+                }
             }
-            self.expanded = !self.expanded
-        }
     }
     
     var animatableData: AnimatablePair<Double, CGFloat> {

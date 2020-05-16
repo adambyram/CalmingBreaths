@@ -13,6 +13,11 @@
 		0E6F53B52431807E0013C609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F53B42431807E0013C609 /* Assets.xcassets */; };
 		0E6F53B82431807E0013C609 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F53B72431807E0013C609 /* Preview Assets.xcassets */; };
 		0E6F53BB2431807E0013C609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F53B92431807E0013C609 /* LaunchScreen.storyboard */; };
+		0EBBBA4C2470470200F56429 /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBBBA492470470200F56429 /* BreathViewController.swift */; };
+		0EBBBA4D2470470200F56429 /* BreathLayerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBBBA4A2470470200F56429 /* BreathLayerGenerator.swift */; };
+		0EBBBA4E2470470200F56429 /* BreathAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBBBA4B2470470200F56429 /* BreathAnimator.swift */; };
+		0EBBBA502470498100F56429 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBBBA4F2470498100F56429 /* StartView.swift */; };
+		0EBBBA5224704B4600F56429 /* BeathViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBBBA5124704B4600F56429 /* BeathViewControllerWrapper.swift */; };
 		0EED9F92246F182800EBFE26 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED9F91246F182800EBFE26 /* HostingController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,11 @@
 		0E6F53B72431807E0013C609 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E6F53BA2431807E0013C609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E6F53BC2431807E0013C609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EBBBA492470470200F56429 /* BreathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
+		0EBBBA4A2470470200F56429 /* BreathLayerGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathLayerGenerator.swift; sourceTree = "<group>"; };
+		0EBBBA4B2470470200F56429 /* BreathAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathAnimator.swift; sourceTree = "<group>"; };
+		0EBBBA4F2470498100F56429 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		0EBBBA5124704B4600F56429 /* BeathViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeathViewControllerWrapper.swift; sourceTree = "<group>"; };
 		0EED9F91246F182800EBFE26 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +68,9 @@
 		0E6F53AD2431807C0013C609 /* Calming Breaths */ = {
 			isa = PBXGroup;
 			children = (
+				0EBBBA4B2470470200F56429 /* BreathAnimator.swift */,
+				0EBBBA4A2470470200F56429 /* BreathLayerGenerator.swift */,
+				0EBBBA492470470200F56429 /* BreathViewController.swift */,
 				0E6F53AE2431807C0013C609 /* AppDelegate.swift */,
 				0E6F53B02431807C0013C609 /* SceneDelegate.swift */,
 				0E6F53B22431807C0013C609 /* ContentView.swift */,
@@ -66,6 +79,8 @@
 				0E6F53BC2431807E0013C609 /* Info.plist */,
 				0E6F53B62431807E0013C609 /* Preview Content */,
 				0EED9F91246F182800EBFE26 /* HostingController.swift */,
+				0EBBBA4F2470498100F56429 /* StartView.swift */,
+				0EBBBA5124704B4600F56429 /* BeathViewControllerWrapper.swift */,
 			);
 			path = "Calming Breaths";
 			sourceTree = "<group>";
@@ -150,8 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EED9F92246F182800EBFE26 /* HostingController.swift in Sources */,
+				0EBBBA5224704B4600F56429 /* BeathViewControllerWrapper.swift in Sources */,
+				0EBBBA4D2470470200F56429 /* BreathLayerGenerator.swift in Sources */,
+				0EBBBA4C2470470200F56429 /* BreathViewController.swift in Sources */,
+				0EBBBA502470498100F56429 /* StartView.swift in Sources */,
 				0E6F53AF2431807C0013C609 /* AppDelegate.swift in Sources */,
 				0E6F53B12431807C0013C609 /* SceneDelegate.swift in Sources */,
+				0EBBBA4E2470470200F56429 /* BreathAnimator.swift in Sources */,
 				0E6F53B32431807C0013C609 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
