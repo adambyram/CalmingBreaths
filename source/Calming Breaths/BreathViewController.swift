@@ -9,7 +9,7 @@ final class BreathViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
         generator = BreathLayerGenerator(center: view.center)
         animator = BreathAnimator(duration: 4, repeatCount: 3, autoreverse: true)

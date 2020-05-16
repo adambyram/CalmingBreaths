@@ -35,12 +35,13 @@ final class BreathLayerGenerator: CALayer {
     }
     
     private func generateColor(alpha: CGFloat) -> CGColor {
-        return UIColor(
-            red: CGFloat.random(in: 0.95..<1),
-            green: CGFloat.random(in: 0.9..<1),
-            blue: CGFloat.random(in: 0.9..<1),
-            alpha: alpha
-            ).cgColor
+//        return UIColor(
+//            red: CGFloat.random(in: 0.95..<1),
+//            green: CGFloat.random(in: 0.9..<1),
+//            blue: CGFloat.random(in: 0.9..<1),
+//            alpha: alpha
+//            ).cgColor
+        return UIColor(red: 154.0/255.0, green: 1.0, blue: 248.0/255.0, alpha: alpha).cgColor
     }
     
 }
