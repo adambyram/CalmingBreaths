@@ -69,7 +69,7 @@ final class BreathAnimator: NSObject, CAAnimationDelegate {
             animationSet.animations = [rotating, scaling, anchoring]
             
             [anchoring, rotating, scaling, animationSet].forEach{
-                $0.setTiming(with: duration, timingName: .easeIn)
+                $0.setTiming(with: duration, timingName: .easeInEaseOut)
             }
             
             animationSet.delegate = delegate
