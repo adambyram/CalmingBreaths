@@ -12,43 +12,69 @@ final class BreathAnimator: NSObject, CAAnimationDelegate {
         self.autoreverse = autoreverse
     }
     
-    func animate(layers: [CALayer]) {
+    func animate(breathIn: Bool, layers: [CALayer], delegate: CAAnimationDelegate?) {
         layers.enumerated().forEach { i, layer in
-            layer.add(generateAnimationSet(factor: i, count: layers.count), forKey: nil)
+            layer.add(generateAnimationSet(breathIn: breathIn, factor: i, count: layers.count, delegate: i == 0 ? delegate : nil), forKey: nil)
         }
     }
     
-    private func generateAnimationSet(factor: Int, count: Int) -> CAAnimationGroup {
-        let rotationFactor = (2*CGFloat.pi/360) * CGFloat(factor)
-        let axis = generateAnchorPoint(spherePos: Double(factor), count: Double(count))
-        
-        let anchoring = CABasicAnimation(keyPath: "anchorPoint")
-        anchoring.toValue = [axis.x, axis.y]
-        
-        let rotating = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotating.toValue = 3*CGFloat.pi - rotationFactor
-        
-        let scaling = CABasicAnimation(keyPath: "transform.scale")
-        scaling.toValue = 5
-        
-        let animationSet = CAAnimationGroup()
-        animationSet.repeatCount = repeatCount
-        animationSet.fillMode = CAMediaTimingFillMode.forwards
-        animationSet.isRemovedOnCompletion = false
-        animationSet.autoreverses = autoreverse
-        animationSet.animations = [rotating, scaling, anchoring]
-        
-        [anchoring, rotating, scaling, animationSet].forEach{
-            $0.setTiming(with: duration)
+    private func generateAnimationSet(breathIn: Bool, factor: Int, count: Int, delegate: CAAnimationDelegate?) -> CAAnimationGroup {
+        if(breathIn)
+        {
+            let rotationFactor = (2*CGFloat.pi/360) * CGFloat(factor)
+            let axis = generateAnchorPoint(spherePos: Double(factor), count: Double(count))
+            
+            let anchoring = CABasicAnimation(keyPath: "anchorPoint")
+            anchoring.toValue = [axis.x, axis.y]
+            
+            let rotating = CABasicAnimation(keyPath: "transform.rotation.z")
+            rotating.toValue = 3*CGFloat.pi - rotationFactor
+            
+            let scaling = CABasicAnimation(keyPath: "transform.scale")
+            scaling.toValue = 5
+            
+            let animationSet = CAAnimationGroup()
+            animationSet.repeatCount = repeatCount
+            animationSet.fillMode = CAMediaTimingFillMode.forwards
+            animationSet.isRemovedOnCompletion = false
+            animationSet.autoreverses = autoreverse
+            animationSet.animations = [rotating, scaling, anchoring]
+            
+            [anchoring, rotating, scaling, animationSet].forEach{
+                $0.setTiming(with: duration, timingName: .easeOut)
+            }
+            
+            animationSet.delegate = delegate
+            return animationSet
         }
-        
-        animationSet.delegate = self
-        return animationSet
-    }
-    
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool)
-    {
-        print("Finished")
+        else
+        {
+            let rotationFactor = -(2*CGFloat.pi/360) * CGFloat(factor)
+            let axis = generateAnchorPoint(spherePos: Double(factor), count: Double(count))
+            
+            let anchoring = CABasicAnimation(keyPath: "anchorPoint")
+            anchoring.toValue = CGPoint(x: 0.5, y: 0.5)
+            
+            let rotating = CABasicAnimation(keyPath: "transform.rotation.z")
+            rotating.toValue = -(3*CGFloat.pi - rotationFactor)
+            
+            let scaling = CABasicAnimation(keyPath: "transform.scale")
+            scaling.toValue = 1
+            
+            let animationSet = CAAnimationGroup()
+            animationSet.repeatCount = repeatCount
+            animationSet.fillMode = CAMediaTimingFillMode.forwards
+            animationSet.isRemovedOnCompletion = false
+            animationSet.autoreverses = autoreverse
+            animationSet.animations = [rotating, scaling, anchoring]
+            
+            [anchoring, rotating, scaling, animationSet].forEach{
+                $0.setTiming(with: duration, timingName: .easeIn)
+            }
+            
+            animationSet.delegate = delegate
+            return animationSet
+        }
     }
     
     private func generateAnchorPoint(spherePos: Double, count: Double) -> (x: Double, y: Double) {
@@ -59,8 +85,8 @@ final class BreathAnimator: NSObject, CAAnimationDelegate {
 }
 
 extension CAAnimation {
-    func setTiming(with duration: Double) {
+    func setTiming(with duration: Double, timingName: CAMediaTimingFunctionName) {
         self.duration = duration
-        self.timingFunction = CAMediaTimingFunction(name: .easeOut)
+        self.timingFunction = CAMediaTimingFunction(name: timingName)
     }
 }
