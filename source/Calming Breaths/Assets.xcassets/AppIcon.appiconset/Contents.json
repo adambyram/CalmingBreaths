@@ -1,94 +1,168 @@
 {
   "images" : [
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPadSettings_29.png",
+      "idiom" : "iphone",
+      "scale" : "1x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPadSettings_29@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPadSpotlight_40@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSpotlight_40@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneApp_60@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneApp_60@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29-4.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSpotlight_40@2x-5.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29-3.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSpotlight_40@2x-4.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29-2.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSpotlight_40@2x-3.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29-1.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSpotlight_40@2x-2.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSpotlight_40@2x-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29-5.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPadProApp_83.5@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "20x20"
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPadSpotlight_40.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPadApp_76.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "76x76"
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPadApp_76@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "size" : "76x76"
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29.png",
+      "idiom" : "iphone",
+      "scale" : "1x",
+      "size" : "29x29",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSettings_29@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "29x29",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Screen Shot 2020-05-20 at 8.14.15 AM_iPhoneSpotlight_40@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "40x40",
+      "unassigned" : true
     }
   ],
   "info" : {
